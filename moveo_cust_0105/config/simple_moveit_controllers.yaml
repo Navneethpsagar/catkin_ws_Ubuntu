@@ -1,0 +1,11 @@
+controller_list:
+  - name: arm_controller
+    action_ns: follow_joint_trajectory
+    type: FollowJointTrajectory
+    default: True
+    joints:
+      - Revolute 1
+      - Revolute 2
+      - Revolute 4
+      - Revolute 5
+      - Revolute 6

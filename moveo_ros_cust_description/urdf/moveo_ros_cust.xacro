@@ -1,0 +1,195 @@
+<?xml version="1.0" ?>
+<robot name="moveo_ros_cust" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+<xacro:include filename="$(find moveo_ros_cust_description)/urdf/materials.xacro" />
+<xacro:include filename="$(find moveo_ros_cust_description)/urdf/moveo_ros_cust.trans" />
+<xacro:include filename="$(find moveo_ros_cust_description)/urdf/moveo_ros_cust.gazebo" />
+<link name="base_link">
+  <inertial>
+    <origin xyz="-0.04353912682058957 1.1841545783966033e-05 0.028800427511151794" rpy="0 0 0"/>
+    <mass value="1.912757204314006"/>
+    <inertia ixx="0.005907" iyy="0.014153" izz="0.017533" ixy="1e-06" iyz="0.0" ixz="-0.000572"/>
+  </inertial>
+  <visual>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://moveo_ros_cust_description/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="abs_white"/>
+  </visual>
+  <collision>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://moveo_ros_cust_description/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="moveo_base_1_1">
+  <inertial>
+    <origin xyz="3.7101256680002715e-05 -0.014073349273890751 0.06848966282661016" rpy="0 0 0"/>
+    <mass value="13.84026194492548"/>
+    <inertia ixx="0.087165" iyy="0.056574" izz="0.059683" ixy="2.4e-05" iyz="-0.005691" ixz="1.5e-05"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.0 -0.0 -0.081" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://moveo_ros_cust_description/meshes/moveo_base_1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="abs_white"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.0 -0.0 -0.081" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://moveo_ros_cust_description/meshes/moveo_base_1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="moveo_shoulder_1_1">
+  <inertial>
+    <origin xyz="-0.00011395316940733614 0.04582773320713201 0.07990096172786262" rpy="0 0 0"/>
+    <mass value="15.143117648509138"/>
+    <inertia ixx="0.134198" iyy="0.127781" izz="0.028267" ixy="2.8e-05" iyz="0.000965" ixz="4e-06"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.0 0.04825 -0.221" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://moveo_ros_cust_description/meshes/moveo_shoulder_1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="abs_white"/>
+  </visual>
+  <collision>
+    <origin xyz="0.0 0.04825 -0.221" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://moveo_ros_cust_description/meshes/moveo_shoulder_1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="moveo_elbow_1_1">
+  <inertial>
+    <origin xyz="7.617983268293992e-05 -0.039052945227758346 0.043052962375156156" rpy="0 0 0"/>
+    <mass value="6.107478523844337"/>
+    <inertia ixx="0.017909" iyy="0.018062" izz="0.005736" ixy="1e-06" iyz="0.00024" ixz="5e-06"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.0 -0.03875 -0.442124" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://moveo_ros_cust_description/meshes/moveo_elbow_1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="opaque198193188"/>
+  </visual>
+  <collision>
+    <origin xyz="0.0 -0.03875 -0.442124" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://moveo_ros_cust_description/meshes/moveo_elbow_1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="moveo_wrist1_1_1">
+  <inertial>
+    <origin xyz="0.00015436797139384216 0.0025482476921564277 0.05125196284811462" rpy="0 0 0"/>
+    <mass value="0.35615599080577137"/>
+    <inertia ixx="0.000742" iyy="0.000609" izz="0.00037" ixy="-1e-06" iyz="1.2e-05" ixz="5e-06"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.0 0.001002 -0.575624" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://moveo_ros_cust_description/meshes/moveo_wrist1_1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="abs_white"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.0 0.001002 -0.575624" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://moveo_ros_cust_description/meshes/moveo_wrist1_1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="moveo_wrist2_1_1">
+  <inertial>
+    <origin xyz="7.764894814559006e-10 0.02438597363850794 0.0038012012605138645" rpy="0 0 0"/>
+    <mass value="0.16799402953278994"/>
+    <inertia ixx="9.5e-05" iyy="0.000113" izz="8e-05" ixy="-0.0" iyz="-1e-06" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.0 0.026002 -0.670624" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://moveo_ros_cust_description/meshes/moveo_wrist2_1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="abs_white"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.0 0.026002 -0.670624" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://moveo_ros_cust_description/meshes/moveo_wrist2_1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="gripper_base_1_1">
+  <inertial>
+    <origin xyz="-0.030138148928027426 0.013915645537354122 0.034103445881066397" rpy="0 0 0"/>
+    <mass value="0.07088399017612114"/>
+    <inertia ixx="2.4e-05" iyy="3.4e-05" izz="3.9e-05" ixy="2e-06" iyz="-0.0" ixz="3e-06"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.015 0.014002 -0.711624" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://moveo_ros_cust_description/meshes/gripper_base_1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="abs_white"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.015 0.014002 -0.711624" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://moveo_ros_cust_description/meshes/gripper_base_1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<joint name="j1" type="continuous">
+  <origin xyz="0.0 0.0 0.081" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="moveo_base_1_1"/>
+  <axis xyz="0.0 0.0 1.0"/>
+</joint>
+
+<joint name="j2" type="continuous">
+  <origin xyz="-0.0 -0.04825 0.14" rpy="0 0 0"/>
+  <parent link="moveo_base_1_1"/>
+  <child link="moveo_shoulder_1_1"/>
+  <axis xyz="0.0 1.0 -0.0"/>
+</joint>
+
+<joint name="j3" type="continuous">
+  <origin xyz="0.0 0.087 0.221124" rpy="0 0 0"/>
+  <parent link="moveo_shoulder_1_1"/>
+  <child link="moveo_elbow_1_1"/>
+  <axis xyz="0.0 1.0 -0.0"/>
+</joint>
+
+<joint name="j4" type="continuous">
+  <origin xyz="0.0 -0.039752 0.1335" rpy="0 0 0"/>
+  <parent link="moveo_elbow_1_1"/>
+  <child link="moveo_wrist1_1_1"/>
+  <axis xyz="0.0 -0.0 -1.0"/>
+</joint>
+
+<joint name="j5" type="continuous">
+  <origin xyz="0.0 -0.025 0.095" rpy="0 0 0"/>
+  <parent link="moveo_wrist1_1_1"/>
+  <child link="moveo_wrist2_1_1"/>
+  <axis xyz="0.0 1.0 -0.0"/>
+</joint>
+
+<joint name="Rigid 24" type="fixed">
+  <origin xyz="0.015 0.012 0.041" rpy="0 0 0"/>
+  <parent link="moveo_wrist2_1_1"/>
+  <child link="gripper_base_1_1"/>
+</joint>
+
+</robot>

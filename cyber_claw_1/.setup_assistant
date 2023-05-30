@@ -1,0 +1,11 @@
+moveit_setup_assistant_config:
+  URDF:
+    package: moveo_ros_cust_description
+    relative_path: urdf/moveo_ros_cust.xacro
+    xacro_args: ""
+  SRDF:
+    relative_path: config/moveo_ros_cust.srdf
+  CONFIG:
+    author_name: nasbdv
+    author_email: hsafdjhv@gmail.com
+    generated_timestamp: 1682635506
